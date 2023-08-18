@@ -308,13 +308,13 @@ class Matrixrate extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
             $select->where('condition_from_value < :condition_value');
             $select->where('condition_to_value >= :condition_value');
 
-            $this->logger->debug('SQL Select: ', $select->getPart('where'));
-            $this->logger->debug('Bindings: ', $bind);
+            //$this->logger->debug('SQL Select: ', $select->getPart('where'));
+            //$this->logger->debug('Bindings: ', $bind);
 
             $results = $adapter->fetchAll($select, $bind);
 
             if (!empty($results)) {
-                $this->logger->debug('SQL Results: ', $results);
+                //$this->logger->debug('SQL Results: ', $results);
                 foreach ($results as $data) {
                     $shippingData[]=$data;
                 }
